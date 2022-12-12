@@ -1,1 +1,1 @@
-# cursos-alura
+# Desenvolvimento de projetos curso Alura
