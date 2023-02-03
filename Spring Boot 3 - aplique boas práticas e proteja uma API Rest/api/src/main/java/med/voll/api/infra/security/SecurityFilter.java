@@ -29,8 +29,8 @@ public class SecurityFilter extends OncePerRequestFilter {
 
         if(tokenJWT != null){ // Só valide o token se for passado
             String subject = tokenService.getSubject(tokenJWT);
-            UserDetails usuario = repository.findByLogin(subject);
 
+            UserDetails usuario = repository.findByLogin(subject);
             Authentication authetication = new UsernamePasswordAuthenticationToken(usuario, null, usuario.getAuthorities());
             SecurityContextHolder.getContext().setAuthentication(authetication);
 
